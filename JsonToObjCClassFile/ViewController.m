@@ -17,7 +17,7 @@
 #import "WHC_XMLParser.h"
 #import <objc/runtime.h>
 
-#define kWHC_DEFAULT_CLASS_NAME @("WHC")
+#define kWHC_DEFAULT_CLASS_NAME @("Default")
 #define kWHC_CLASS       @("\n@interface %@ :NSObject\n%@\n@end\n")
 #define kWHC_PROPERTY    @("@property (nonatomic , strong) %@              * %@;\n")
 #define kWHC_CLASS_M     @("@implementation %@\n\n@end\n")
@@ -188,7 +188,7 @@
     }else{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
-        NSAlert * alert = [NSAlert alertWithMessageText:@"WHC" defaultButton:@"确定" alternateButton:nil otherButton:nil informativeTextWithFormat:@"json或者xml数据不能为空"];
+        NSAlert * alert = [NSAlert alertWithMessageText:@"提示" defaultButton:@"确定" alternateButton:nil otherButton:nil informativeTextWithFormat:@"json或者xml数据不能为空"];
         [alert runModal];
 #pragma clang diagnostic pop
     }

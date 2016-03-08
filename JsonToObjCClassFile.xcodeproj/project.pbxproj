@@ -15,6 +15,7 @@
 		8009BB251C8EE49400862C15 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB211C8EE49400862C15 /* image1.jpg */; };
 		8009BB261C8EE49400862C15 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB221C8EE49400862C15 /* image2.jpg */; };
 		8009BB271C8EE49400862C15 /* WHC_XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8009BB241C8EE49400862C15 /* WHC_XMLParser.m */; };
+		8009BB291C8EEE6200862C15 /* JsonToObjC.png in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB281C8EEE6200862C15 /* JsonToObjC.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8009BB221C8EE49400862C15 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		8009BB231C8EE49400862C15 /* WHC_XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_XMLParser.h; sourceTree = "<group>"; };
 		8009BB241C8EE49400862C15 /* WHC_XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_XMLParser.m; sourceTree = "<group>"; };
+		8009BB281C8EEE6200862C15 /* JsonToObjC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JsonToObjC.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				8009BB0D1C8EE44300862C15 /* AppDelegate.m */,
 				8009BB121C8EE44300862C15 /* ViewController.h */,
 				8009BB131C8EE44300862C15 /* ViewController.m */,
+				8009BB281C8EEE6200862C15 /* JsonToObjC.png */,
 				8009BB151C8EE44300862C15 /* Assets.xcassets */,
 				8009BB171C8EE44300862C15 /* Main.storyboard */,
 				8009BB1A1C8EE44300862C15 /* Info.plist */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8009BB161C8EE44300862C15 /* Assets.xcassets in Resources */,
+				8009BB291C8EEE6200862C15 /* JsonToObjC.png in Resources */,
 				8009BB191C8EE44300862C15 /* Main.storyboard in Resources */,
 				8009BB261C8EE49400862C15 /* image2.jpg in Resources */,
 				8009BB251C8EE49400862C15 /* image1.jpg in Resources */,
