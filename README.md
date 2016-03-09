@@ -5,4 +5,7 @@
 *此工具原作者为吴海超，github地址：https://github.com/netyouli/WHC_DataModelFactory
 *csdn:http://blog.csdn.net/windwhc/article/category/3117381
 
-当前版本在原版本中添加了Json数据查看面板以及导出数据模型对应的类文件的功能。
+当前版本在原版本中添加了Json数据查看面板以及导出数据模型对应类文件的功能。目前xml解析尚有问题，后续修复。
+
+
+JSON，ObjC，Objective-C，DataModel，数据模型，XML，IOS
