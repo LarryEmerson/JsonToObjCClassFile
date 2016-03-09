@@ -25,7 +25,7 @@
 
 #define kSWHC_CLASS @("\n@objc(%@)\nclass %@ :NSObject{\n%@\n}")
 #define kSWHC_PROPERTY @("var %@: %@!;\n")
-@interface ViewController ()<NSTextFieldDelegate>{
+@interface ViewController ()<NSTextFieldDelegate,NSXMLParserDelegate>{
     NSMutableString       *   _classString;        //存类头文件内容
     NSMutableString       *   _classMString;       //存类源文件内容
 }
@@ -62,23 +62,32 @@
 }
 - (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor{
     NSString *str=_jsonField.stringValue;
-    str=[str stringByReplacingOccurrencesOfString:@"\\\"" withString: @"\""];
-    str=[str stringByReplacingOccurrencesOfString:@"\\\\u" withString: @"\\u"];
-    str=[str stringByReplacingOccurrencesOfString:@"\\U" withString: @"\\u"];
-    str=[str stringByReplacingOccurrencesOfString:@"=" withString: @":"];
-    str=[str stringByReplacingOccurrencesOfString:@"\"{" withString: @"{"];
-    str=[str stringByReplacingOccurrencesOfString:@"}\"" withString: @"}"];
-    str=[str stringByReplacingOccurrencesOfString:@"\"[" withString: @"["];
-    str=[str stringByReplacingOccurrencesOfString:@"]\"" withString: @"]"];
-    [_jsonField setStringValue:str];
-    NSString *chineseStr=[NSString stringWithCString:[str cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
-    cursePosition=0;
-    id jsonValue=[self JSONValue:chineseStr];
-    chineseStr=@"";
-    chineseStr=[self returnFormattedString:jsonValue With:chineseStr];
-    [_textView setString:chineseStr];
+    if([str hasPrefix:@"<"]){
+        NSDictionary *dic = [WHC_XMLParser dictionaryForXMLString:str];
+        NSString *chineseStr=@"";
+        chineseStr=[self returnFormattedString:dic With:chineseStr];
+        [_textView setString:chineseStr];
+    }else{
+        str=[str stringByReplacingOccurrencesOfString:@"\\\"" withString: @"\""];
+        str=[str stringByReplacingOccurrencesOfString:@"\\\\u" withString: @"\\u"];
+        str=[str stringByReplacingOccurrencesOfString:@"\\U" withString: @"\\u"];
+        str=[str stringByReplacingOccurrencesOfString:@"=" withString: @":"];
+        str=[str stringByReplacingOccurrencesOfString:@"\"{" withString: @"{"];
+        str=[str stringByReplacingOccurrencesOfString:@"}\"" withString: @"}"];
+        str=[str stringByReplacingOccurrencesOfString:@"\"[" withString: @"["];
+        str=[str stringByReplacingOccurrencesOfString:@"]\"" withString: @"]"];
+        [_jsonField setStringValue:str];
+        NSString *chineseStr=[NSString stringWithCString:[str cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
+        cursePosition=0;
+        id jsonValue=[self JSONValue:chineseStr];
+        chineseStr=@"";
+        chineseStr=[self returnFormattedString:jsonValue With:chineseStr];
+        [_textView setString:chineseStr];
+    }
     return YES;
 }
+//
+
 -(NSString *) getPosition{
     NSString *str=@"";
     for (int i=0; i<cursePosition; i++) {
@@ -137,7 +146,6 @@
     return str;
 }
 -(id)JSONValue:(NSString *) str {
-    //    NSLogObject(self);
     NSData* data = [str dataUsingEncoding:NSUTF8StringEncoding];
     __autoreleasing NSError* error = nil;
     id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
@@ -160,6 +168,7 @@
     
     [_classString appendString:@"#import <UIKit/UIKit.h>\n"];
     [_classMString appendFormat:@"#import \"%@.h\"\n\n",className];
+ 
     if(json && json.length){
         NSDictionary  * dict = nil;
         if([json hasPrefix:@"<"]){ //xml

@@ -13,8 +13,7 @@
  *当前版本地址：https://github.com/LarryEmerson/WHC_DataModelFactory
  *当前版本在原版本中添加了Json数据查看面板以及导出数据模型对应的类文件。
  */
-#import <Cocoa/Cocoa.h>
-
+#import <Cocoa/Cocoa.h> 
 @interface ViewController : NSViewController
 
 
