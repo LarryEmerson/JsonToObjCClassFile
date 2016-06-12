@@ -10,7 +10,7 @@
  *并且可以一键根据Json数据转成一个或多个数据模型于一体的.h和.m类文件到指定目录中。
  *此工具原作者为吴海超，github地址：https://github.com/netyouli/WHC_DataModelFactory
  *csdn:http://blog.csdn.net/windwhc/article/category/3117381
- *当前版本地址：https://github.com/LarryEmerson/WHC_DataModelFactory
+ *当前版本地址：https://github.com/LarryEmerson/JsonToObjCClassFile
  *当前版本在原版本中添加了Json数据查看面板以及导出数据模型对应的类文件。
  */
 #import "AppDelegate.h"

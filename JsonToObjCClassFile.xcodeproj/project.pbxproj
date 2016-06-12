@@ -12,10 +12,9 @@
 		8009BB141C8EE44300862C15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8009BB131C8EE44300862C15 /* ViewController.m */; };
 		8009BB161C8EE44300862C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB151C8EE44300862C15 /* Assets.xcassets */; };
 		8009BB191C8EE44300862C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB171C8EE44300862C15 /* Main.storyboard */; };
-		8009BB251C8EE49400862C15 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB211C8EE49400862C15 /* image1.jpg */; };
-		8009BB261C8EE49400862C15 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB221C8EE49400862C15 /* image2.jpg */; };
 		8009BB271C8EE49400862C15 /* WHC_XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8009BB241C8EE49400862C15 /* WHC_XMLParser.m */; };
-		8009BB291C8EEE6200862C15 /* JsonToObjC.png in Resources */ = {isa = PBXBuildFile; fileRef = 8009BB281C8EEE6200862C15 /* JsonToObjC.png */; };
+		8091FC7B1D0CF2B300BF3CB3 /* LE_DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8091FC7A1D0CF2B300BF3CB3 /* LE_DataModel.m */; };
+		8091FC8E1D0D44F100BF3CB3 /* JsonToObjCClassFile.png in Resources */ = {isa = PBXBuildFile; fileRef = 8091FC8D1D0D44F100BF3CB3 /* JsonToObjCClassFile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +27,11 @@
 		8009BB151C8EE44300862C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8009BB181C8EE44300862C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8009BB1A1C8EE44300862C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8009BB211C8EE49400862C15 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
-		8009BB221C8EE49400862C15 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		8009BB231C8EE49400862C15 /* WHC_XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_XMLParser.h; sourceTree = "<group>"; };
 		8009BB241C8EE49400862C15 /* WHC_XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_XMLParser.m; sourceTree = "<group>"; };
-		8009BB281C8EEE6200862C15 /* JsonToObjC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JsonToObjC.png; sourceTree = "<group>"; };
+		8091FC791D0CF2B300BF3CB3 /* LE_DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LE_DataModel.h; sourceTree = "<group>"; };
+		8091FC7A1D0CF2B300BF3CB3 /* LE_DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LE_DataModel.m; sourceTree = "<group>"; };
+		8091FC8D1D0D44F100BF3CB3 /* JsonToObjCClassFile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JsonToObjCClassFile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +64,13 @@
 		8009BB0B1C8EE44300862C15 /* JsonToObjCClassFile */ = {
 			isa = PBXGroup;
 			children = (
+				8091FC781D0CF29B00BF3CB3 /* DataModel */,
 				8009BB201C8EE49400862C15 /* WHCLib */,
 				8009BB0C1C8EE44300862C15 /* AppDelegate.h */,
 				8009BB0D1C8EE44300862C15 /* AppDelegate.m */,
 				8009BB121C8EE44300862C15 /* ViewController.h */,
 				8009BB131C8EE44300862C15 /* ViewController.m */,
-				8009BB281C8EEE6200862C15 /* JsonToObjC.png */,
+				8091FC8D1D0D44F100BF3CB3 /* JsonToObjCClassFile.png */,
 				8009BB151C8EE44300862C15 /* Assets.xcassets */,
 				8009BB171C8EE44300862C15 /* Main.storyboard */,
 				8009BB1A1C8EE44300862C15 /* Info.plist */,
@@ -90,12 +90,19 @@
 		8009BB201C8EE49400862C15 /* WHCLib */ = {
 			isa = PBXGroup;
 			children = (
-				8009BB211C8EE49400862C15 /* image1.jpg */,
-				8009BB221C8EE49400862C15 /* image2.jpg */,
 				8009BB231C8EE49400862C15 /* WHC_XMLParser.h */,
 				8009BB241C8EE49400862C15 /* WHC_XMLParser.m */,
 			);
 			path = WHCLib;
+			sourceTree = "<group>";
+		};
+		8091FC781D0CF29B00BF3CB3 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				8091FC791D0CF2B300BF3CB3 /* LE_DataModel.h */,
+				8091FC7A1D0CF2B300BF3CB3 /* LE_DataModel.m */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +115,7 @@
 				8009BB051C8EE44300862C15 /* Sources */,
 				8009BB061C8EE44300862C15 /* Frameworks */,
 				8009BB071C8EE44300862C15 /* Resources */,
+				5EE59C6426FF131977C08165 /* Find unused imports */,
 			);
 			buildRules = (
 			);
@@ -156,20 +164,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				8009BB161C8EE44300862C15 /* Assets.xcassets in Resources */,
-				8009BB291C8EEE6200862C15 /* JsonToObjC.png in Resources */,
+				8091FC8E1D0D44F100BF3CB3 /* JsonToObjCClassFile.png in Resources */,
 				8009BB191C8EE44300862C15 /* Main.storyboard in Resources */,
-				8009BB261C8EE49400862C15 /* image2.jpg in Resources */,
-				8009BB251C8EE49400862C15 /* image1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EE59C6426FF131977C08165 /* Find unused imports */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Find unused imports";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"/Users/LarryEmerson/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh\" \"/Volumes/MacHD/LarryEmerson/RemoteGits/JsonToObjCClassFile\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8009BB051C8EE44300862C15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8091FC7B1D0CF2B300BF3CB3 /* LE_DataModel.m in Sources */,
 				8009BB141C8EE44300862C15 /* ViewController.m in Sources */,
 				8009BB271C8EE49400862C15 /* WHC_XMLParser.m in Sources */,
 				8009BB111C8EE44300862C15 /* main.m in Sources */,
