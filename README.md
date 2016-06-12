@@ -6,9 +6,13 @@
 
 2-LE_DataModel提供了2个接口，分别用于生成单个数据模型（Dic-> obj）和批量数据模型的生成（Array->objs）。
 接口如下：
+
 -(id) initWithDataSource:(NSDictionary *) data;
+
 用于单个数据模型的生成，非静态方法。
+
 +(NSArray *) initWithDataSources:(NSArray *) dataArray ClassName:(NSString *) className;
+
 批量数据模型生成采用静态方法。
 
 3-数据模型类前缀“DataModel_”改为“DM_”。
