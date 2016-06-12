@@ -4,10 +4,10 @@
 
 1-添加了LE_DataModel数据模型基类，自动生成的数据模型类都会基于次基类。
 
-2个共用接口，分别用于生成单个数据模型和批量数据模型的生成。
+2-LE_DataModel提供了2个接口，分别用于生成单个数据模型（Dic-> obj）和批量数据模型的生成（Array->objs）。
 接口如下：
 -(id) initWithDataSource:(NSDictionary *) data;
-单个数据模型生成数据成员方法
+用于单个数据模型的生成，非静态方法。
 +(NSArray *) initWithDataSources:(NSArray *) dataArray ClassName:(NSString *) className;
 批量数据模型生成采用静态方法。
 
@@ -35,7 +35,7 @@ JsonToObjCClassFile是原作者吴海超“WHC_DataModelFactory”的扩展版�
 使用方法：
 
 DM_Test *test=[[DM_Test alloc] initWithDataSource:[data JSONValue]];
-NSArray *array=[DM_Test initWithDataSources:[data JSONValue] ClassName:@"DM_Test"];
+NSArray *array=[LE_DataModel initWithDataSources:[data JSONValue] ClassName:@"DM_Test"];
 
 
 具体的“WHC_DataModel”内容，请移步https://github.com/netyouli/WHC_DataModel
