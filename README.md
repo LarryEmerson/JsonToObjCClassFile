@@ -31,18 +31,11 @@ JsonToObjCClassFile是一款MAC中使用的类似于JsonToCode的开发工具，
 
 ![image](https://github.com/LarryEmerson/JsonToObjCClassFile/blob/master/JsonToObjCClassFile/JsonToObjCClassFile.png)
 
-JsonToObjCClassFile是原作者吴海超“WHC_DataModelFactory”的扩展版，
-“WHC_DataModelFactory”的github地址：https://github.com/netyouli/WHC_DataModelFactory
+JsonToObjCClassFile是原作者吴海超“WHC_DataModelFactory”的扩展版，“WHC_DataModelFactory”的github地址：https://github.com/netyouli/WHC_DataModelFactory
 
-生成的类文件请配合WHC_DataModel库使用。
+###使用方法：
 
-使用方法：
-
-DM_Test *test=[[DM_Test alloc] initWithDataSource:[data JSONValue]];
-NSArray *array=[LE_DataModel initWithDataSources:[data JSONValue] ClassName:@"DM_Test"];
-
-
-具体的“WHC_DataModel”内容，请移步https://github.com/netyouli/WHC_DataModel
-
-
+####DM_Test *test=[[DM_Test alloc] initWithDataSource:[data JSONValue]];
+####NSArray *array=[LE_DataModel initWithDataSources:[data JSONValue] ClassName:@"DM_Test"];
+ 
 JSON，ObjC，Objective-C，DataModel，数据模型，XML，IOS
